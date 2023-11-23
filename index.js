@@ -2,12 +2,6 @@ const puppeteer = require('puppeteer');
 const ffmpeg = require('fluent-ffmpeg');
 
 const url = 'https://interactly.video';
-
-if (!url) {
-  console.error('Please provide a website URL.');
-  process.exit(1);
-}
-
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
